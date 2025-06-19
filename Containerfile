@@ -41,6 +41,8 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    qt5-qtwebengine qt5-qtwebkit \
    qt5-qtwebsockets qt5-qtwebview qt5ct qt5pas
 
+COPY 99-usb-serial.rules /etc/udev/rules.d
+
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
