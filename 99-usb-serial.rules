@@ -1,0 +1,2 @@
+ACTION=="add|change", SUBSYSTEM=="tty", MODE="0666"
+
