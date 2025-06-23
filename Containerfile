@@ -42,14 +42,19 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    qt5-qtwebsockets qt5-qtwebview qt5ct qt5pas \
    minicom gnome-session-xsession xorg-x11-drv-intel
 
+# Install Extension Manager (optional, but convenient)
+RUN rpm-ostree install com.mattjakeman.ExtensionManager
+
+# Layer a specific extension (if available in repos)
+RUN rpm-ostree install gnome-shell-extension-no-overview
 
 # Install Flatpak (usually already present in toolbox images)
 # Ensure Flathub is added as a remote repository
-RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
-RUN flatpak install flathub org.freedesktop.Platform/x86_64/24.08 -y
+#RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
+#RUN flatpak install flathub org.freedesktop.Platform/x86_64/24.08 -y
 
 # Install Anydesk Flatpak
-RUN flatpak install flathub com.anydesk.Anydesk
+#RUN flatpak install flathub com.anydesk.Anydesk
 
 
 COPY 99-usb-serial.rules /etc/udev/rules.d
