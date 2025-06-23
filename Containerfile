@@ -42,6 +42,10 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    qt5-qtwebsockets qt5-qtwebview qt5ct qt5pas \
    minicom gnome-session-xsession xorg-x11-drv-intel
 
+# Install Flatpak (usually already present in toolbox images)
+# Ensure Flathub is added as a remote repository
+RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo 
+
 # Install Anydesk Flatpak
 RUN flatpak install flathub com.anydesk.Anydesk
 
