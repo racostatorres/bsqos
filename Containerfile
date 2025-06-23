@@ -42,6 +42,10 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    qt5-qtwebsockets qt5-qtwebview qt5ct qt5pas \
    minicom gnome-session-xsession xorg-x11-drv-intel
 
+# Install Anydesk Flatpak
+RUN flatpak install flathub com.anydesk.Anydesk
+
+
 COPY 99-usb-serial.rules /etc/udev/rules.d
 
 ## make modifications desired in your image and install packages by modifying the build.sh script
