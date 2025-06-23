@@ -43,7 +43,8 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    minicom gnome-session-xsession xorg-x11-drv-intel
 
 # Install Extension Manager (optional, but convenient)
-RUN rpm-ostree install com.mattjakeman.ExtensionManager
+#RUN rpm-ostree install com.mattjakeman.ExtensionManager
+
 
 # Layer a specific extension (if available in repos)
 RUN rpm-ostree install gnome-shell-extension-no-overview
