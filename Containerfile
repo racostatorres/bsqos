@@ -47,7 +47,7 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
 
 
 # Layer a specific extension (if available in repos)
-RUN rpm-ostree install gnome-shell-extension-no-overview
+RUN rpm-ostree install gnome-shell-extension-no-overview gnome-shell-extension-just-perfection
 
 # Install Flatpak (usually already present in toolbox images)
 # Ensure Flathub is added as a remote repository
