@@ -40,7 +40,7 @@ RUN rpm-ostree install gnome-kiosk gnome-kiosk-script-session qt5-qt3d \
    qt5-qttools-libs-help qt5-qtvirtualkeyboard qt5-qtwebchannel \
    qt5-qtwebengine qt5-qtwebkit \
    qt5-qtwebsockets qt5-qtwebview qt5ct qt5pas \
-   minicom gnome-session-xsession xorg-x11-drv-intel
+   minicom gnome-session-xsession xorg-x11-drv-intel menulibre
 
 # Install Extension Manager (optional, but convenient)
 #RUN rpm-ostree install com.mattjakeman.ExtensionManager
